@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div>
+    { % if user.is_authenticated % }
+    <h3>Hello {{ fname }} !</h3>
+    <h4>You're successfully logged in.</h4>
+
+    <button type="submit"><a href="/signout" class="btn">Sign Out</a></button>
+    { % else % }
+    <h2>Welcome to my first backend project..!</h2>
+    <button type="submit"><a href="/signup" class="btn">Sign Up</a></button>
+    <br/>
+    <br/>
+    <button type="submit"><a href="/signin" class="btn">Sign In</a></button>
+    {% endif % }
+</div>
+</body>
+</html>
+
+
+</html>
